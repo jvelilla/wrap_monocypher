@@ -32,14 +32,14 @@ $spitshell >>Makefile <<'!NO!SUBS!'
 OBJECTS = monocypher.o
 
 monocypher.a: $(OBJECTS)
-	mkdir -p ../C/spec/$(PLATFORM)/lib
+	mkdir -p ../../spec/$(PLATFORM)/lib
 	$(RM) $@
 	$(AR) $@ $(OBJECTS)
-	$(MV) $@ ../C/spec/$(PLATFORM)/lib
-	$(RANLIB) ../C/spec/$(PLATFORM)/lib/$@
+	$(MV) $@ ../../spec/$(PLATFORM)/lib
+	$(RANLIB) ../..//spec/$(PLATFORM)/lib/$@
 	$(MAKE) clean
 
-	#$(RM) eif_libffi.a $(OBJECTS) Makefile config.sh
+	#$(RM) monocypher.a $(OBJECTS) Makefile config.sh
 clean:
 	$(RM) monocypher.a $(OBJECTS)
 !NO!SUBS!

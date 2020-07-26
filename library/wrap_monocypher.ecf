@@ -24,6 +24,11 @@
 				<platform value="windows"/>
 			</condition>
 		</external_include>
+		<external_include location="$ECF_CONFIG_PATH/C/include/src">
+			<condition>
+				<platform excluded_value="windows"/>
+			</condition>
+		</external_include>
 		<external_object location="$ECF_CONFIG_PATH/C/spec/$ISE_C_COMPILER/$ISE_PLATFORM/lib/eif_monocypher.lib">
 			<condition>
 				<platform value="windows"/>
@@ -34,7 +39,7 @@
 				<platform excluded_value="windows"/>
 			</condition>
 		</external_object>
-		<external_object location="/usr/local/lib/monocypher.so">
+		<external_object location="$ECF_CONFIG_PATH/C/spec/$(ISE_PLATFORM)/lib/monocypher.a">
 			<condition>
 				<platform excluded_value="windows"/>
 			</condition>

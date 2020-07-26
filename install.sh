@@ -2,7 +2,7 @@
 #Script to automate WrapC install process.
 
 echo Generate Monochypher library
-cd libray
+cd library
 ./generator.sh
 cd ..
 
